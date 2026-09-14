@@ -1,0 +1,25 @@
+# docker-compose.yml
+# Expects this directory layout on the host:
+#   ./docker-compose.yml
+#   ./Dockerfile
+#   ./entrypoint.sh
+#   ./ros2_ws/src
+#
+# ros2_ws is bind-mounted (not copied into the image), so any packages you
+# clone/create in ./ros2_ws/src on the host, and any colcon build/install
+# output, live outside the container and survive rebuilds.
+services:
+  ros2-lyrical:
+    build: .
+    image: ros2-lyrical:latest
+    container_name: ros2-lyrical
+    stdin_open: true
+    tty: true
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - ./ros2_ws:/root/ros2_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    working_dir: /root/ros2_ws
