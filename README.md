@@ -50,7 +50,7 @@ docker compose down
 
 ## 🎓 ROS 2 Lyrical Tutorial Checklist
 
-**Primary Resource:** [Tutorials — ROS 2 Documentation: Lyrical documentation](https://docs.ros.org/en/lyrical/Tutorials.html)
+**Primary Resource:** [Tutorials — ROS 2 Documentation: Lyrical documentation](https://docs.ros.org/en/lyrical/)
 
 ---
 
