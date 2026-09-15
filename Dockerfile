@@ -49,6 +49,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ros-lyrical-tlsf-cpp \
         ros-lyrical-turtlesim \
         ros-lyrical-urdf-tutorial \
+        ros-lyrical-navigation2 \
+        ros-lyrical-nav2-bringup \
         ros-lyrical-xacro \
     && rm -rf /var/lib/apt/lists/*
 
